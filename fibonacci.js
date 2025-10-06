@@ -13,7 +13,18 @@ function fibs(digits) {
 
 // The fibonacci function with recursion
 function fibsRec(digits) {
-
+    if (digits === 1) {
+      return [0];
+    } 
+    if (digits === 2) {
+      return [0, 1];
+    } 
+    return [
+      ...fibsRec(digits - 1), 
+            fibsRec(digits - 1)[digits - 2] + fibsRec(digits - 1)[digits - 3]
+      ];
+    
 }
 
 console.log(fibs(8));
+console.log(fibsRec(8));
