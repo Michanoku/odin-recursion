@@ -29,5 +29,7 @@ function fibsRec(digits) {
     fibArray.push(next);
     return fibArray;  
 }
+
+// Tests
 console.log(fibs(8));
 console.log(fibsRec(8));
