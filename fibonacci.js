@@ -1,20 +1,19 @@
 // The fibonacci function
 function fibs(digits) {
   const fibArray = new Array();
-  let current = 0;
-  let next = 1;
   for (let i = 0; i < digits; i++) {
-    fibArray.push(current);
-    const temp = current;
-    current = next;
-    next+= temp;
+    if (i <= 1) {
+      fibArray.push(i);
+    } else {
+      fibArray.push((fibArray[i-1] + fibArray[i-2]));
+    }
   }
   return fibArray;
 }
 
 // The fibonacci function with recursion
-function fibsRec() {
-  // TODO
+function fibsRec(digits) {
+
 }
 
 console.log(fibs(8));
