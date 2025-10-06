@@ -21,13 +21,13 @@ function fibsRec(digits) {
     if (digits === 2) {
       return [0, 1];
     } 
+    // Get the array 
     const fibArray = fibsRec(digits - 1);
-
+    // Calculate the next number in the array
     const next = fibArray[fibArray.length - 1] + fibArray[fibArray.length - 2];
+    // Push it and return the array
     fibArray.push(next);
-    
-    return fibArray;
-    
+    return fibArray;  
 }
 console.log(fibs(8));
 console.log(fibsRec(8));
